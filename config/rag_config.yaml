@@ -1,0 +1,76 @@
+current_preset: comprehensive
+default_preset: balanced
+presets:
+  balanced:
+    chunking:
+      chunk_overlap: 200
+      chunk_size: 1000
+      split_by: sentence
+    context:
+      include_relevance: true
+      include_sources: true
+      max_chars: 8000
+    embedding:
+      model: nomic-embed-text
+      ollama_base_url: http://localhost:11434
+      provider: ollama
+    generation:
+      max_output_tokens: 4096
+      temperature: 0.5
+      top_k: 40
+      top_p: 0.95
+    model:
+      name: models/gemini-2.0-flash
+      provider: google
+    retrieval:
+      distance_metric: cosine
+      k_results: 15
+      similarity_threshold: 0.6
+  comprehensive:
+    chunking:
+      chunk_overlap: 300
+      chunk_size: 1500
+      split_by: paragraph
+    context:
+      include_relevance: true
+      include_sources: true
+      max_chars: 12000
+    embedding:
+      model: nomic-embed-text
+      ollama_base_url: http://localhost:11434
+      provider: ollama
+    generation:
+      max_output_tokens: 8192
+      temperature: 0.4
+      top_k: 97
+      top_p: 0.98
+    model:
+      name: models/gemini-2.5-flash
+      provider: google
+    retrieval:
+      distance_metric: euclidean
+      k_results: 30
+      similarity_threshold: 0.7
+  precise:
+    chunking:
+      chunk_overlap: 100
+      chunk_size: 800
+      split_by: sentence
+    context:
+      include_relevance: true
+      include_sources: true
+      max_chars: 6000
+    generation:
+      max_output_tokens: 2048
+      temperature: 0.1
+      top_k: 30
+      top_p: 0.9
+    retrieval:
+      distance_metric: cosine
+      k_results: 5
+      similarity_threshold: 0.7
+system:
+  cache_embeddings: true
+  logging_level: INFO
+  max_retries: 3
+  parallel_processing: true

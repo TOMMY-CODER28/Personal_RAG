@@ -1,0 +1,74 @@
+.env
+.env.*
+*.log
+logs/
+log/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Node
+node_modules/
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+.dist-info/
+dist/
+build/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.pytype/
+.dmypy.json
+.ipynb_checkpoints
+.pyre/
+coverage/
+coverage.xml
+
+# Framework caches
+.next/
+.nuxt/
+.out/
+.cache/
+.parcel-cache/
+.sass-cache/
+storybook-static/
+public/build/
+
+# Temp
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+
+EBooks_For_RAG
